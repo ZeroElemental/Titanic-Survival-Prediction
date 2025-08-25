@@ -78,10 +78,4 @@ This project is released under the [MIT License](LICENSE).
 
 ---
 
-## Authors
-
-Created by [ZeroElemental](https://github.com/ZeroElemental).
-
----
-
 Feel free to customize this README to better fit your specific workflow or add more details about your implementation!
