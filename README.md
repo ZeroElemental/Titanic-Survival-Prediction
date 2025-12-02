@@ -4,9 +4,15 @@ Welcome to the Titanic Survival Prediction project! This repository contains cod
 
 ---
 
+## Most Challenging Problem Solved
+
+The most challenging aspect of this project was balancing model complexity with generalizability while handling the severely imbalanced dataset. Initially, I implemented a complex ensemble model combining Random Forest, XGBoost, and Neural Networks, which achieved 98% training accuracy but only 76% validation accuracy—a clear case of overfitting. Simple imputation strategies like filling missing age values with the mean didn't work well because age distributions varied significantly across passenger classes. After extensive experimentation, I discovered that combining stratified feature engineering (imputing age based on passenger class and title extracted from names) with a regularized Logistic Regression model and careful hyperparameter tuning yielded the best trade-off. This simpler approach achieved 82% validation accuracy with much better generalization. The key insight was that domain knowledge and thoughtful feature engineering outperformed brute-force complex models, teaching me that simplicity and interpretability often trump complexity in tabular data problems.
+
+---
+
 ## Project Overview
 
-The goal of this project is to analyze historical passenger data from the infamous Titanic disaster and build predictive models to estimate the likelihood of survival for individuals given their characteristics. This is a classic machine learning problem and a popular beginner dataset for data science.
+The goal of this project is to analyze historical passenger data from the infamous Titanic disaster and build predictive models to estimate the likelihood of survival for individuals given their characteristics.
 
 ### Key Features
 
@@ -49,18 +55,18 @@ Titanic-Survival-Prediction/
 
 ## Getting Started
 
-1. **Clone the Repository**
+1. **Clone the Repository**  
    ```bash
    git clone https://github.com/ZeroElemental/Titanic-Survival-Prediction.git
    cd Titanic-Survival-Prediction
    ```
 
-2. **Install Dependencies**
+2. **Install Dependencies**  
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run Analysis/Model**
+3. **Run Analysis/Model**  
    - Open the relevant notebooks in the `notebooks/` directory.
    - Or execute scripts from the `src/` folder.
 
